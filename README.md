@@ -159,5 +159,10 @@ Enhances interpretability for field engineers and GIS operators.
 
 ---
 
-## 📄 License
-MIT (or update based on institution guidelines)
+## Challenges Faced
+- Achieving a significantly higher mean IoU than baseline and prior models was extremely challenging, since landslides cover very small, irregular regions that make IoU highly sensitive to errors.
+- Improving IoU required designing specialized modules (CRFF, edge enhancement, coordinate attention) and tuning them carefully to capture both global terrain context and fine boundaries simultaneously.
+- Outperforming existing state-of-the-art landslide models while keeping the architecture lightweight demanded intense optimization, custom feature fusion, and removing unnecessary heavy components.
+- Balancing model complexity vs performance was difficult: the goal was to stay lighter than transformer-heavy architectures but still achieve stronger segmentation metrics.
+- Extensive experiments were needed to reach a setup that increased IoU, reduced false positives, and preserved slope boundaries across diverse terrains.
+- The combination of multi-modal data fusion and boundary-focused refinement was essential to boost IoU, but making all components work efficiently took a lot of iteration.
